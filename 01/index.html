@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    
+<script
+	src="https://cdn.jsdelivr.net/gh/xTracky/static@latest/utm-handler.js"
+	data-token=""
+>
+</script>    
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Étape Sûre</title>
+    <meta name="description" content="Bonjour">
+    <meta name="theme-color" content="#000000">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            min-height: 100vh;
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px rgba(239, 68, 68, 0.6);
+            }
+        }
+
+        @keyframes bounceSubtle {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* Main Container */
+        .container {
+            width: 100%;
+            max-width: 28rem;
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        /* Text Section */
+        .text-section {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .text-section h1 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #ffffff;
+        }
+
+        .text-section p {
+            font-size: 0.875rem;
+            color: #999999;
+            opacity: 0.7;
+        }
+
+        /* Button Section */
+        .button-section {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 1rem;
+        }
+
+        .btn-continuer {
+            width: 100%;
+            max-width: 20rem;
+            height: 3.5rem;
+            background-color: #ef4444;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.125rem;
+            border: none;
+            border-radius: 9999px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+
+        .btn-continuer:hover {
+            background-color: #dc2626;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.5);
+        }
+
+        .btn-continuer:active {
+            transform: scale(0.95);
+        }
+
+        /* Decorative Dots */
+        .decorative-dots {
+            margin-top: 2rem;
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            opacity: 0.4;
+        }
+
+        .dot {
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: #ef4444;
+            border-radius: 50%;
+            animation: bounceSubtle 2s ease-in-out infinite;
+        }
+
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 640px) {
+            .text-section h1 {
+                font-size: 1.5rem;
+            }
+
+            .btn-continuer {
+                font-size: 1rem;
+                height: 3rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .text-section h1 {
+                font-size: 2.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <!-- Text Section -->
+            <div class="text-section">
+                <h1>Cliquez sur le bouton ci-dessous pour continuer</h1>
+                <p>Appuyez sur le bouton pour accéder à la suite</p>
+            </div>
+
+            <!-- Button Section -->
+            <div class="button-section">
+                <button class="btn-continuer" onclick="window.location.href='COLE A URL DA PRIMEIRA ETAPA' + window.location.search">
+                    Continuer
+                </button>
+            </div>
+
+            <!-- Decorative Element -->
+            <div class="decorative-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
